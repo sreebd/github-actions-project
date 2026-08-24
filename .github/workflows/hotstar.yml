@@ -70,9 +70,9 @@ jobs:
           echo "SonarQube server URL: $SONAR_HOST"
           curl -I $SONAR_HOST
           mvn sonar:sonar \
-         -Dsonar.projectKey=hotstar \
-         -Dsonar.host.url=http://184.192.104.180:9000 \
-         -Dsonar.login=6b3b39b296aa286308e558a90c18d02a0066386d
+            -Dsonar.projectKey=hotstar \
+            -Dsonar.host.url=$SONAR_HOST \
+            -Dsonar.login=$SONAR_LOGIN
 
   deploy:
     runs-on: ubuntu-latest
