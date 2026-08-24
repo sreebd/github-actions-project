@@ -6,7 +6,7 @@ on:
 
 jobs:
   build:
-    runs-on: [sree-hosted, linux]
+    runs-on: [self-hosted, linux]
 
     steps:
       # 1. Checkout code
@@ -43,7 +43,7 @@ jobs:
           path: target/*.war
 
   deploy:
-    runs-on: [sree-hosted, linux]
+    runs-on: [self-hosted, linux]
     needs: build
     environment: production
 
